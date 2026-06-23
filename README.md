@@ -124,23 +124,10 @@ Pipeline training được xây theo nhiều giai đoạn:
 4. **PPO-style self-play** để policy học tương tác nhiều agent cùng lúc.
 5. **Elite-log recurrent imitation** từ các top leaderboard agents để học
    chiến thuật theo phase trận.
-6. **PFSP league training** để sample opponent snapshots/clones theo độ khó.
+6. **PFSP (Prioritized Fictitious Self-Play) league training** để sample opponent snapshots/clones theo độ khó.
 7. **Conservative checkpoint selection** dựa trên average rank, rank-0 rate,
    rank-3 rate, draw rate, bomb rate và wait rate.
 
-## PFSP Là Gì?
-
-**PFSP (Prioritized Fictitious Self-Play)** là cách chọn đối thủ trong
-self-play không hoàn toàn ngẫu nhiên. Thay vì train đều với mọi snapshot,
-PFSP ưu tiên các opponent có giá trị học cao:
-
-- opponent mà policy còn thua nhiều;
-- opponent thắng được nhưng chưa ổn định;
-- elite clones mô phỏng hành vi top agents;
-- frozen policy snapshots giúp tránh quên chiến thuật cũ.
-
-Trong notebook, PFSP giúp agent không overfit vào một team cụ thể và cải
-thiện độ ổn định trước nhiều nhóm meta khác nhau.
 
 ## Strategy Summary
 
