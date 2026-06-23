@@ -47,11 +47,6 @@ self-trap và hạn chế rank-3 finishes.
 
 ### 2. Neural Policy
 
-Neural policy là phần học được từ dữ liệu và self-play. Có thể hiểu đơn giản:
-rule-based safety core trả lời câu hỏi **"action nào có thể sống được?"**,
-còn neural policy trả lời câu hỏi **"trong các action hợp lệ, action nào
-giống hành vi của một agent mạnh nhất?"**.
-
 Model được thiết kế dạng **CNN-GRU actor-critic** và export bằng
 **TorchScript** để chạy nhanh trong official evaluator.
 
