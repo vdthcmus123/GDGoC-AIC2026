@@ -1,4 +1,4 @@
-# Bomberland GDGoC AI Challenge - Rank #4 Agent
+# Bomberland GDGoC AI Challenge
 
 Repository này chứa mã nguồn của đội thi DipperxBill, kết thúc cuộc thi với **rank #4** trên final leaderboard.
 
